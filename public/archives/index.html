@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en, zh-cn">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
 <meta name="generator" content="Hexo 6.0.0">
 
 
@@ -19,15 +20,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"stttw.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"stttw.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="Share ideas while learning.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="StttW&#39;s Blog">
 <meta property="og:url" content="http://stttw.com/archives/index.html">
 <meta property="og:site_name" content="StttW&#39;s Blog">
 <meta property="og:description" content="Share ideas while learning.">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Shentong Wang">
+<meta property="og:locale">
+<meta property="article:author" content="st w">
 <meta property="article:tag" content="Technical Articles">
 <meta name="twitter:card" content="summary">
 
@@ -36,10 +37,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"","path":"archives/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en, zh-cn","comments":"","permalink":"","path":"archives/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Archive | StttW's Blog</title>
+<title>StttW's Blog</title>
   
 
 
@@ -58,6 +59,9 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -78,6 +82,11 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+  </ul>
+</nav>
 
 
 
@@ -111,19 +120,23 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Shentong Wang</p>
+    <img class="site-author-image" itemprop="image" alt="st w"
+      src="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+  <p class="site-author-name" itemprop="name">st w</p>
   <div class="site-description" itemprop="description">Share ideas while learning.</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangltsss" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangltsss" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:me@stttw.com" title="E-Mail → mailto:me@stttw.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -147,49 +160,320 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner index posts-expand">
+
+    
 
 
+<div class="post-block">
   
   
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 1 post. Keep on posting.</span>
-      </div>
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/23/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/01/23/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-title-link" itemprop="url">Java多线程的学习笔记(Multithreading in Java)(未完)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-01-23 21:16:08" itemprop="dateCreated datePublished" datetime="2022-01-23T21:16:08-05:00">2022-01-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="多线程基础"><a href="#多线程基础" class="headerlink" title="多线程基础"></a>多线程基础</h1><p>在计算机中，通常运行的每个应用被叫做一个进程(Process)。而每个进程可以包含多个子进程，叫做线程(Thread)。例如在音乐播放器中，播放音乐需要一个线程，显示歌词又需要一个线程。一个进程至少包含一个线程，也可以包含多个线程。</p>
+<h1 id="Java的多线程"><a href="#Java的多线程" class="headerlink" title="Java的多线程"></a>Java的多线程</h1><h2 id="多线程流程"><a href="#多线程流程" class="headerlink" title="多线程流程"></a>多线程流程</h2><p>在创建Thread实例后，线程会等待<code>start()</code>的执行以进入就绪状态(Ready)。<br><br>进入就绪状态后，该线程会处于就绪队列中，等待被调度。 <br><br>当该就绪状态的线程获取CPU资源后，就可以调用<code>run()</code>方法，此时该线程处于运行状态(Running)。<br><br>当一个线程占用资源时间耗尽，或者主动执行<code>wait()</code>等方法后，就会进入阻塞状态(Blocked)。处于阻塞状态的线程再重新获取CPU资源之前，会一直处于阻塞状态。</p>
+<h2 id="新建Thread实例"><a href="#新建Thread实例" class="headerlink" title="新建Thread实例"></a>新建<code>Thread</code>实例</h2><p>可以通过</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class ThreadRunnable extends Thread&#123;</span><br><span class="line">	/* override run() method */</span><br><span class="line">	private void run()&#123;</span><br><span class="line">		/* */</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class ThreadRunnable implements Runnable&#123;</span><br><span class="line">	/* override run() method */</span><br><span class="line">	private void run()&#123;</span><br><span class="line">		/* */</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/23/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-23T14:16:04-05:00"
-              content="2022-01-23">
-          01-23
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/01/23/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" itemprop="url">
-            <span itemprop="name">Pyserial库的使用心得</span>
-          </a>
-      </div>
-
+    <footer class="post-footer">
+        <div class="post-eof"></div>
       
-    </header>
+    </footer>
   </article>
+</div>
 
 
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/23/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/01/23/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">Latex技巧总结(更新中)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-01-23 21:15:59" itemprop="dateCreated datePublished" datetime="2022-01-23T21:15:59-05:00">2022-01-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="文本类"><a href="#文本类" class="headerlink" title="文本类"></a>文本类</h2><h3 id="Description环境"><a href="#Description环境" class="headerlink" title="Description环境"></a>Description环境</h3><p><strong>大象</strong>&nbsp;&nbsp;&nbsp;&nbsp;一种动物。<br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;description&#125;</span><br><span class="line">	\item&#123;大象&#125; 一种动物。</span><br><span class="line">\end&#123;description&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;</span><br><span class="line">	\item[] 第一项</span><br><span class="line">	\item[] 第二项</span><br><span class="line">	\item[] 第三项</span><br><span class="line">\end&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/23/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
     </div>
-  </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/23/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/01/23/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">Pyserial的使用心得</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-01-23 21:15:48" itemprop="dateCreated datePublished" datetime="2022-01-23T21:15:48-05:00">2022-01-23</time>
+    </span>
+
   
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Pyserial库的安装"><a href="#Pyserial库的安装" class="headerlink" title="Pyserial库的安装"></a>Pyserial库的安装</h1><p>将python版本更新到2.7及以上，或3.4及以上，然后直接使用pip安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyserial</span><br></pre></td></tr></table></figure>
+
+<h1 id="Serial对象"><a href="#Serial对象" class="headerlink" title="Serial对象"></a>Serial对象</h1><p>导入pyserial包后使用serial.Serial创建。<br>此处因为业务需要，需要同时在windows和linux或macos下访问此应用。<br>在windows和linux中，端口名称不相同。<br>在windows下，端口名形如【COMx】（x为整数）；<br>在linux下，端口名形如【/dev/xxxxx】（x为具体端口名）。<br>因此还引入了platform来判断系统以获取不同系统下的端口。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import serial</span><br><span class="line"></span><br><span class="line">	def create_connection(self, port):</span><br><span class="line">        if self._system.lower() == &quot;darwin&quot;:</span><br><span class="line">            self.ser = serial.Serial(port=&quot;/dev/&#123;&#125;&quot;.format(port),</span><br><span class="line">                                     baudrate=115200, #波特率</span><br><span class="line">                                     bytesize=8, #字节大小</span><br><span class="line">                                     stopbits=1) #停止位</span><br><span class="line">        elif self._system.lower() == &quot;windows&quot;:</span><br><span class="line">            self.ser = serial.Serial(port=port,</span><br><span class="line">                                     baudrate=115200,</span><br><span class="line">                                     bytesize=8,</span><br><span class="line">                                     stopbits=1)</span><br></pre></td></tr></table></figure>
+<p>此处应根据实际业务需求设置【校验位】，【超时时间】等属性。</p>
+<h2 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性"></a>常用属性</h2><p>以下为Serial对象所有的属性：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">port: str #端口名</span><br><span class="line">baudrate: int #波特率</span><br><span class="line">bytesize #可能的值：FIVEBITS, SIXBITS, SEVENBITS, EIGHTBITS</span><br><span class="line">parity #可能的值：PARITY_NONE, PARITY_EVEN, PARITY_ODD PARITY_MARK, PARITY_SPACE</span><br><span class="line">stopbits #可能的值：STOPBITS_ONE, STOPBITS_ONE_POINT_FIVE, STOPBITS_TWO</span><br><span class="line">timeout: float #超时时长</span><br><span class="line">xonxoff: bool #软件流控制的开关</span><br><span class="line">rtscts: bool #硬件(RTS/CTS)流控制的开关</span><br><span class="line">dsrdtr: bool #硬件(DSR/DTR)流控制的开关</span><br><span class="line">write_timeout: float #输出的超时时间</span><br><span class="line">inter_byte_timeout: float #字符间隔超时时长，默认设置为None以禁用</span><br><span class="line">in_waiting: int #返回输入缓冲区（待接收）中的字符数量</span><br><span class="line">out_waiting: int #返回输出缓冲区（待发送）中的字符数量</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/23/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/23/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/01/23/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/" class="post-title-link" itemprop="url">在CentOS 8上部署基于Flask实现的项目</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-01-23 21:15:17" itemprop="dateCreated datePublished" datetime="2022-01-23T21:15:17-05:00">2022-01-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>写这篇文章是因为我在自己部署项目的时候，遇到了很多仅靠别人的博客和回答解决不了的问题。于是在自己解决了之后，就希望能够详细的记录下来，既能方便其他可能跟我一样基础比较差的人，也预防将来的自己忘掉了，又得一遍遍的翻枯燥的官方文档。</p>
+<h1 id="关于服务器"><a href="#关于服务器" class="headerlink" title="关于服务器"></a>关于服务器</h1><p>我购买的是阿里云的服务器，今年618期间很便宜，最低配置的60块不到就能买上一年。<br>操作系统我选择了CentOS 8。原因无他，一直以来用的都是Cent OS，且更高的版本号意味着更好的兼容性与稳定性（测试版除外）。</p>
+<h1 id="关于环境"><a href="#关于环境" class="headerlink" title="关于环境"></a>关于环境</h1><p>以下这些操作，建议在本地电脑完成之后，再使用git同步到服务器端。</p>
+<p>非常不建议用户直接使用root账户来进行以下操作。</p>
+<p>非常建议用户创建一个有sudo权限的账户来进行以下操作。</p>
+<h2 id="python版本"><a href="#python版本" class="headerlink" title="python版本"></a>python版本</h2><p>在Cent OS下，建议直接使用yum命令进行下载。yum命令提供了4个版本的python可供下载:</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/23/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 </div>
   </main>
@@ -204,9 +488,9 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Shentong Wang</span>
+  <span class="author" itemprop="copyrightHolder">st w</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>

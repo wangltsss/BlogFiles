@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en, zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"stttw.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="文本类Description环境大象&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;一种动物。 123\begin&amp;#123;description&amp;#125;	\item&amp;#123;大象&amp;#125; 一种动物。\end&amp;#123;description&amp;#125;   列表有序列表 第一项 第二项 第三项  12345\begin&amp;#123;enumerate&amp;#125;	\item[] 第一项">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Latex技巧总结(更新中)">
+<meta property="og:url" content="http://stttw.com/2022/01/23/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="StttW&#39;s Blog">
+<meta property="og:description" content="文本类Description环境大象&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;一种动物。 123\begin&amp;#123;description&amp;#125;	\item&amp;#123;大象&amp;#125; 一种动物。\end&amp;#123;description&amp;#125;   列表有序列表 第一项 第二项 第三项  12345\begin&amp;#123;enumerate&amp;#125;	\item[] 第一项">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-01-24T02:15:59.000Z">
+<meta property="article:modified_time" content="2022-01-24T02:15:59.080Z">
+<meta property="article:author" content="st w">
+<meta property="article:tag" content="Technical Articles">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://stttw.com/2022/01/23/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en, zh-cn","comments":true,"permalink":"http://stttw.com/2022/01/23/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/","path":"2022/01/23/Latex技巧总结/","title":"Latex技巧总结(更新中)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Latex技巧总结(更新中) | StttW's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">StttW's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">文本类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.</span> <span class="nav-text">Description环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.1.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.2.</span> <span class="nav-text">无序列表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">数学类</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="st w"
+      src="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+  <p class="site-author-name" itemprop="name">st w</p>
+  <div class="site-description" itemprop="description">Share ideas while learning.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangltsss" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangltsss" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:me@stttw.com" title="E-Mail → mailto:me@stttw.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en, zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/23/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Latex技巧总结(更新中)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-01-23 21:15:59" itemprop="dateCreated datePublished" datetime="2022-01-23T21:15:59-05:00">2022-01-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="文本类"><a href="#文本类" class="headerlink" title="文本类"></a>文本类</h2><h3 id="Description环境"><a href="#Description环境" class="headerlink" title="Description环境"></a>Description环境</h3><p><strong>大象</strong>&nbsp;&nbsp;&nbsp;&nbsp;一种动物。</br></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;description&#125;</span><br><span class="line">	\item&#123;大象&#125; 一种动物。</span><br><span class="line">\end&#123;description&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;</span><br><span class="line">	\item[] 第一项</span><br><span class="line">	\item[] 第二项</span><br><span class="line">	\item[] 第三项</span><br><span class="line">\end&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>形如:</br></p>
+<ul>
+<li>subsubsub</li>
+<li>supsupsup</li>
+<li>puspuspus</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;itemize&#125;</span><br><span class="line">	\item[] subsubsub</span><br><span class="line">	\item[] supsupsup</span><br><span class="line">	\item[] puspuspus</span><br><span class="line">\end&#123;itemize&#125;</span><br></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;[]内可指定自定义行符。</p>
+<hr>
+<h2 id="数学类"><a href="#数学类" class="headerlink" title="数学类"></a>数学类</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/01/23/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" rel="prev" title="Pyserial的使用心得">
+                  <i class="fa fa-chevron-left"></i> Pyserial的使用心得
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/01/23/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="next" title="Java多线程的学习笔记(Multithreading in Java)(未完)">
+                  Java多线程的学习笔记(Multithreading in Java)(未完) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">st w</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
