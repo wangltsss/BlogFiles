@@ -1,243 +1,432 @@
-<!DOCTYPE html>
-<html lang="en, zh-cn">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.0.0">
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>StttW&#39;s Blog</title>
+  <meta name="author" content="st w">
+  
+  <meta name="description" content="Share ideas while learning.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  
+  <meta property="og:site_name" content="StttW&#39;s Blog"/>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"stttw.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="点击Archives可以看到所有文章。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="这是一个主页">
-<meta property="og:url" content="http://stttw.com/index.html">
-<meta property="og:site_name" content="StttW&#39;s Blog">
-<meta property="og:description" content="点击Archives可以看到所有文章。">
-<meta property="og:locale">
-<meta property="article:published_time" content="2022-01-24T03:07:02.028Z">
-<meta property="article:modified_time" content="2022-01-24T03:07:02.028Z">
-<meta property="article:author" content="st w">
-<meta property="article:tag" content="Technical Articles">
-<meta name="twitter:card" content="summary">
-
-
-<link rel="canonical" href="http://stttw.com/">
-
-
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en, zh-cn","comments":true,"permalink":"http://stttw.com/index.html","path":"index.html","title":"这是一个主页"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>这是一个主页 | StttW's Blog
-</title>
+  
+    <meta property="og:image" content=""/>
   
 
+  
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70812759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-70812759-1');
+</script>
 
 
 
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">StttW's Blog</p>
-      <i class="logo-line"></i>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
 
 
 
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
-  </ul>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">StttW&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
 </nav>
+<div class="clearfix"></div>
 
-
-
-
+  <div class="container">
+  	<div class="content">
+    	 <div class="page-header logo">
+  <h1>StttW&#39;s Blog<span class="blink-fast">|</span></h1>
 </div>
-        
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
+
+<div class="row page">
+
+	
+	<div class="col-md-9">
+	
+
+		<div class="slogan">
+
+
+		<i class="fa fa-heart blink-slow"></i>
+
+		歪比歪比
+
+</div>    
+
+		<div id="top_search"></div>
+		<div class="mypage">
+		
+		<!-- title and entry -->
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2022/01/23/Java的多线程/" >Java多线程的学习笔记(Multithreading in Java)(未完)</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2022-01-23  </div>
+		</div>
+	</div>
+	
+
+
+			<!--
+<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="写在前边"><a href="#写在前边" class="headerlink" title="写在前边"></a>写在前边</h1><p>前一阵子想用Java从头开始写一个自己的网站，于是找了一个教程。教程的第一步就是入门servlet<br>，自己了解了一下发现需要熟悉多线程。正好这学期有一门课是以C语言为基础讲并发系统的，干脆自己在研究一下Java多线程。</p>
+	
+
+	</div>
+  <a type="button" href="/2022/01/23/Java的多线程/#more" class="btn btn-default more">Read More</a>
+</div>
+
+-->
+<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="写在前边"><a href="#写在前边" class="headerlink" title="写在前边"></a>写在前边</h1><p>前一阵子想用Java从头开始写一个自己的网站，于是找了一个教程。教程的第一步就是入门servlet<br>，自己了解了一下发现需要熟悉多线程。正好这学期有一门课是以C语言为基础讲并发系统的，干脆自己在研究一下Java多线程。</p>
+	
+	</div>
+  <a type="button" href="/2022/01/23/Java的多线程/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2022/01/23/Latex技巧总结/" >Latex技巧总结(更新中)</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2022-01-23  </div>
+		</div>
+	</div>
+	
+
+
+			<!--
+<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这篇文章主要记录一些用LaTeX写作时常用的环境以及数学公式，一来方便自己需要时查阅，二来也给有需要的人提供一点便利。</p>
+<p><strong>注意</strong>，这篇文章假设你了解LaTeX的基本知识，所以没有LaTeX的详细教学。</p>
+	
+
+	</div>
+  <a type="button" href="/2022/01/23/Latex技巧总结/#more" class="btn btn-default more">Read More</a>
+</div>
+
+-->
+<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这篇文章主要记录一些用LaTeX写作时常用的环境以及数学公式，一来方便自己需要时查阅，二来也给有需要的人提供一点便利。</p>
+<p><strong>注意</strong>，这篇文章假设你了解LaTeX的基本知识，所以没有LaTeX的详细教学。</p>
+	
+	</div>
+  <a type="button" href="/2022/01/23/Latex技巧总结/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2022/01/23/Pyserial库使用心得/" >Pyserial的使用心得</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2022-01-23  </div>
+		</div>
+	</div>
+	
+
+
+			<!--
+<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="关于Pyserial"><a href="#关于Pyserial" class="headerlink" title="关于Pyserial"></a>关于Pyserial</h1><p>Pyserial库封装了访问串口的方法。它为在Windows，OSX，Linux，BSD和IronPython上运行的Python提供后端。<code>serial</code>对象会自动选择合适的后端。<br>This module encapsulates the access for the serial port. It provides backends for Python running on Windows, OSX, Linux, BSD (possibly any POSIX compliant system) and IronPython. The module named “serial” automatically selects the appropriate backend.</p>
+	
+
+	</div>
+  <a type="button" href="/2022/01/23/Pyserial库使用心得/#more" class="btn btn-default more">Read More</a>
+</div>
+
+-->
+<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="关于Pyserial"><a href="#关于Pyserial" class="headerlink" title="关于Pyserial"></a>关于Pyserial</h1><p>Pyserial库封装了访问串口的方法。它为在Windows，OSX，Linux，BSD和IronPython上运行的Python提供后端。<code>serial</code>对象会自动选择合适的后端。<br>This module encapsulates the access for the serial port. It provides backends for Python running on Windows, OSX, Linux, BSD (possibly any POSIX compliant system) and IronPython. The module named “serial” automatically selects the appropriate backend.</p>
+	
+	</div>
+  <a type="button" href="/2022/01/23/Pyserial库使用心得/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2022/01/23/部署Flask项目/" >在CentOS 8上部署基于Flask实现的项目</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2022-01-23  </div>
+		</div>
+	</div>
+	
+
+
+			<!--
+<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>写这篇文章是因为我在自己部署项目的时候，遇到了很多仅靠别人的博客和回答解决不了的问题。于是在自己解决了之后，就希望能够详细的记录下来，既能方便其他可能跟我一样基础比较差的人，也预防将来的自己忘掉了，又得一遍遍的翻枯燥的官方文档。</p>
+	
+
+	</div>
+  <a type="button" href="/2022/01/23/部署Flask项目/#more" class="btn btn-default more">Read More</a>
+</div>
+
+-->
+<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>写这篇文章是因为我在自己部署项目的时候，遇到了很多仅靠别人的博客和回答解决不了的问题。于是在自己解决了之后，就希望能够详细的记录下来，既能方便其他可能跟我一样基础比较差的人，也预防将来的自己忘掉了，又得一遍遍的翻枯燥的官方文档。</p>
+	
+	</div>
+  <a type="button" href="/2022/01/23/部署Flask项目/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+
+		</div>
+
+		<!-- pagination -->
+		<div>
+  		<center>
+		<div class="pagination">
+
+   
+</div>
+
+  		</center>
+		</div>
+
+		
+		
+	</div> <!-- col-md-9 -->
+
+	
+		<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
   </div>
 
-  <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
+		
+			
+	<div class="widget">
+		<h4>Categories</h4>
+		<ul class="tag_box inline list-unstyled">
+		
+			<li><a href="/categories/Dictionaries/">Dictionaries<span>1</span></a></li>
+		
+			<li><a href="/categories/Linux-Shell/">Linux &amp; Shell<span>1</span></a></li>
+		
+			<li><a href="/categories/Pogramming-Algorithms/">Pogramming&amp;Algorithms<span>1</span></a></li>
+		
+		</ul>
+	</div>
 
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-        </div>
-        <!--/noindex-->
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/LaTeX/">LaTeX<span>1</span></a></li>
+		
+			<li><a href="/tags/Linux/">Linux<span>1</span></a></li>
+		
+			<li><a href="/tags/Java/">Java<span>1</span></a></li>
+		
+			<li><a href="/tags/Multithreading/">Multithreading<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>2</span></a></li>
+		
+		 
+		</ul>
+	</div>
 
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="st w"
-      src="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
-  <p class="site-author-name" itemprop="name">st w</p>
-  <div class="site-description" itemprop="description">Share ideas while learning.</div>
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2022/01/23/Java的多线程/" ><i class="fa fa-file-o"></i>Java多线程的学习笔记(Multithreading...</a>
+      </li>
+    
+      <li>
+        <a href="/2022/01/23/Latex技巧总结/" ><i class="fa fa-file-o"></i>Latex技巧总结(更新中)</a>
+      </li>
+    
+      <li>
+        <a href="/2022/01/23/Pyserial库使用心得/" ><i class="fa fa-file-o"></i>Pyserial的使用心得</a>
+      </li>
+    
+      <li>
+        <a href="/2022/01/23/部署Flask项目/" ><i class="fa fa-file-o"></i>在CentOS 8上部署基于Flask实现的项目</a>
+      </li>
+    
+  </ul>
 </div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">4</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="https://icons-for-free.com/iconfiles/png/512/linkedin+button+linkedin+logo+logo+icon-1320184669365171116.png"></i><a href="https://www.linkedin.com/in/shentong-wang-b9372b1b7/" title="My Linkin account." target="_blank"]);">LinkedIn</a></li>
+	
+		<li><i class="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png"></i><a href="https://github.com/wangltsss" title="My GitHub mainpage." target="_blank"]);">Github</a></li>
+	
+	</ul>
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/wangltsss" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangltsss" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:me@stttw.com" title="E-Mail → mailto:me@stttw.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+	
+	
+</div> <!-- row-fluid -->
+	</div>
   </div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
-
-    
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner page posts-expand">
+  <div class="container-narrow">
+  <footer> <p>
   
+  &copy; 2022 st w's Blog
+  
+      powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.Theme <a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" target="_blank">freemind.bithack</a>  
+</p>
+ </footer>
+</div> <!-- container-narrow -->
   
 
 
-    
-    
-    
-    <div class="post-block" lang="en, zh-cn"><header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">这是一个主页
-</h1>
-
-<div class="post-meta-container">
-</div>
-
-</header>
-
-      
-      
-      <div class="post-body">
-          <p>点击Archives可以看到所有文章。</p>
-
-      </div>
-      
-      
-      
-    </div>
-
-    
-    
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">st w</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
-  </div>
-
-    </div>
-  </footer>
-
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
 
-  
-
-
-
-
-
-  
-
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
 
 
 
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
 
 </body>
-</html>
+   </html>
