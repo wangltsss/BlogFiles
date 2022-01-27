@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en, zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+<!-- Referrer Policy调整致不蒜子单页面统计出错:https://senorui.top/posts/c33f.html -->
+<meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"stttw.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="写在前边前一阵子想用Java从头开始写一个自己的网站，于是找了一个教程。教程的第一步就是入门servlet，自己了解了一下发现需要熟悉多线程。正好这学期有一门课是以C语言为基础讲并发系统的，干脆自己在研究一下Java多线程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java多线程的学习笔记(Multithreading in Java)(未完)">
+<meta property="og:url" content="http://stttw.com/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.html">
+<meta property="og:site_name" content="StttW&#39;s Blog">
+<meta property="og:description" content="写在前边前一阵子想用Java从头开始写一个自己的网站，于是找了一个教程。教程的第一步就是入门servlet，自己了解了一下发现需要熟悉多线程。正好这学期有一门课是以C语言为基础讲并发系统的，干脆自己在研究一下Java多线程。">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-01-23T02:16:08.000Z">
+<meta property="article:modified_time" content="2022-01-27T16:22:00.664Z">
+<meta property="article:author" content="st w">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Multithreading">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://stttw.com/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en, zh-cn'
+  };
+</script>
+
+  <title>Java多线程的学习笔记(Multithreading in Java)(未完) | StttW's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">StttW's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/wangltsss" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java多线程的学习笔记(Multithreading in Java)(未完)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-01-22 21:16:08" itemprop="dateCreated datePublished" datetime="2022-01-22T21:16:08-05:00">2022-01-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-27 11:22:00" itemprop="dateModified" datetime="2022-01-27T11:22:00-05:00">2022-01-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Programming & Algorithms</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-meta-item leancloud_visitors" data-flag-title="Java多线程的学习笔记(Multithreading in Java)(未完)" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="写在前边"><a href="#写在前边" class="headerlink" title="写在前边"></a>写在前边</h1><p>前一阵子想用Java从头开始写一个自己的网站，于是找了一个教程。教程的第一步就是入门servlet<br>，自己了解了一下发现需要熟悉多线程。正好这学期有一门课是以C语言为基础讲并发系统的，干脆自己在研究一下Java多线程。</p>
+<span id="more"></span>
+
+<h1 id="多线程基础"><a href="#多线程基础" class="headerlink" title="多线程基础"></a>多线程基础</h1><p>在计算机中，通常运行的每个应用被叫做一个进程(Process)。而每个进程可以包含多个子进程，叫做线程(Thread)。例如在音乐播放器中，播放音乐需要一个线程，显示歌词又需要一个线程。一个进程至少包含一个线程，也可以包含多个线程。</p>
+<h1 id="Java的多线程"><a href="#Java的多线程" class="headerlink" title="Java的多线程"></a>Java的多线程</h1><h2 id="多线程流程"><a href="#多线程流程" class="headerlink" title="多线程流程"></a>多线程流程</h2><p>在创建Thread实例后，线程会等待<code>start()</code>的执行以进入就绪状态(Ready)。</br><br>进入就绪状态后，该线程会处于就绪队列中，等待被调度。 </br><br>当该就绪状态的线程获取CPU资源后，就可以调用<code>run()</code>方法，此时该线程处于运行状态(Running)。</br><br>当一个线程占用资源时间耗尽，或者主动执行<code>wait()</code>等方法后，就会进入阻塞状态(Blocked)。处于阻塞状态的线程再重新获取CPU资源之前，会一直处于阻塞状态。</p>
+<h2 id="新建Thread实例"><a href="#新建Thread实例" class="headerlink" title="新建Thread实例"></a>新建<code>Thread</code>实例</h2><p>可以通过</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadRunnable</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">	<span class="comment">/* override run() method */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="comment">/* */</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">	<span class="comment">/* override run() method */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="comment">/* */</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="线程的同步"><a href="#线程的同步" class="headerlink" title="线程的同步"></a>线程的同步</h2><h3 id="原子-atomic-操作"><a href="#原子-atomic-操作" class="headerlink" title="原子(atomic)操作"></a>原子(atomic)操作</h3><p>语句如</br></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n = n + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>看似为单个语句，但其实其中至少包含了三步:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 不标准的Assembly.</span><br><span class="line">ld sp(0), x5		// suppose stack pointer is pointing to n and load it into x5.</span><br><span class="line">addi x5, x5, 1		// n = n + 1.</span><br><span class="line">sd x5, sp(0)		// save n = n + 1 back.</span><br></pre></td></tr></table></figure>
+
+<p>原子操作为不可被分割的指令，如:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n;   <span class="comment">//---  addi sp sp -8		make room on the stack for one int.</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="多线程中共享变量-shared-variable-的问题"><a href="#多线程中共享变量-shared-variable-的问题" class="headerlink" title="多线程中共享变量(shared variable)的问题"></a>多线程中共享变量(shared variable)的问题</h3><p>如果将<code>n</code>初始化为0，同时创建两个线程，一个线程（线程1）负责执行10000次<code>n += 1</code>，另一个（线程2）负责执行10000次<code>n -= 1</code>，最后<code>n</code>的值每次都会不同。</br><br>这是因为，非常可能地，在线程1读取到<code>n = 0</code>后，线程2立刻抢占了CPU资源，并且同样读取到了<code>n = 0</code>（因为线程1还来不及对<code>n</code>做修改），并且执行了<code>n -= 1</code>并存储回<code>n</code>。此时线程1重新获得资源，但此时线程1已经进行过读取操作（<code>n = 0</code>），所以最后经过<code>n += 1</code>和<code>n -= 1</code>后，<code>n</code>此时的值为1.</p>
+<h3 id="synchronized关键字"><a href="#synchronized关键字" class="headerlink" title="synchronized关键字"></a>synchronized关键字</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">synchronized</span>(lock object)&#123;</span><br><span class="line">	<span class="comment">// clauses</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>&#123;</code>会自动为<code>synchronized</code>内部的语句加锁，而<code>&#125;</code>会自动解锁。</br><br>注意，<code>lock</code>实例与<code>synchronized</code>内部的语句无关，该lock实例可以为任何对象的实例。<br>在<code>synchronized</code>结构中归属于同一个<code>lock</code>实例的语句不能被同时执行。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/Multithreading/" rel="tag"># Multithreading</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" rel="prev" title="Latex技巧总结(更新中)">
+      <i class="fa fa-chevron-left"></i> Latex技巧总结(更新中)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/01/26/ConcurrentNotes/" rel="next" title="Concurrent System Study Notes(Continuing...)">
+      Concurrent System Study Notes(Continuing...) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E8%BE%B9"><span class="nav-number">1.</span> <span class="nav-text">写在前边</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80"><span class="nav-number">2.</span> <span class="nav-text">多线程基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">Java的多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%B5%81%E7%A8%8B"><span class="nav-number">3.1.</span> <span class="nav-text">多线程流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BAThread%E5%AE%9E%E4%BE%8B"><span class="nav-number">3.2.</span> <span class="nav-text">新建Thread实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%90%8C%E6%AD%A5"><span class="nav-number">3.3.</span> <span class="nav-text">线程的同步</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%AD%90-atomic-%E6%93%8D%E4%BD%9C"><span class="nav-number">3.3.1.</span> <span class="nav-text">原子(atomic)操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%AD%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F-shared-variable-%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">3.3.2.</span> <span class="nav-text">多线程中共享变量(shared variable)的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">3.3.3.</span> <span class="nav-text">synchronized关键字</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="st w"
+      src="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+  <p class="site-author-name" itemprop="name">st w</p>
+  <div class="site-description" itemprop="description">Share ideas while learning.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangltsss" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangltsss" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:me@stttw.com" title="E-Mail → mailto:me@stttw.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">st w</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">14k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">12 mins.</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+    <span class="post-count">| 博客共14k字</span>
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61f2cf5b2a5d7e12" async="async"></script>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'nflbOJbX4Hdx110wPTbCcYQJ-gzGzoHsz',
+      appKey     : '3M98T2DabXtKJpFe7vbhcVyD',
+      placeholder: "提交评论时留下邮箱收到回复后将自动通知",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'en' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

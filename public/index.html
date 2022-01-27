@@ -1,484 +1,963 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en, zh-cn">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
-  
-  <title>StttW&#39;s Blog</title>
-  <meta name="author" content="st w">
-  
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+<!-- Referrer Policy调整致不蒜子单页面统计出错:https://senorui.top/posts/c33f.html -->
+<meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"stttw.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
   <meta name="description" content="Share ideas while learning.">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="StttW&#39;s Blog">
+<meta property="og:url" content="http://stttw.com/index.html">
+<meta property="og:site_name" content="StttW&#39;s Blog">
+<meta property="og:description" content="Share ideas while learning.">
+<meta property="og:locale">
+<meta property="article:author" content="st w">
+<meta property="article:tag" content="Technical Articles">
+<meta name="twitter:card" content="summary">
 
-  
-  <meta property="og:site_name" content="StttW&#39;s Blog"/>
+<link rel="canonical" href="http://stttw.com/">
 
-  
-    <meta property="og:image" content=""/>
-  
 
-  
-  
-  
-  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-  <script src="/js/jquery-2.0.3.min.js"></script>
-
-  <!-- analytics -->
-  
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70812759-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-70812759-1');
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en, zh-cn'
+  };
 </script>
 
+  <title>StttW's Blog</title>
+  
 
 
 
 
 
-<meta name="generator" content="Hexo 6.0.0"></head>
 
- <body>  
-  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		<span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	  <a class="navbar-brand" href="/">StttW&#39;s Blog</a>
-      <div class="collapse navbar-collapse nav-menu">
-		<ul class="nav navbar-nav">
-		  
-		  <li>
-			<a href="/archives" title="All the articles.">
-			  <i class=""></i>Archives
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/categories" title="All the categories.">
-			  <i class=""></i>Categories
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/tags" title="All the tags.">
-			  <i class=""></i>Tags
-			</a>
-		  </li>
-		  
-		</ul>
-      </div>
-    </div> <!-- container -->
-</nav>
-<div class="clearfix"></div>
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-  <div class="container">
-  	<div class="content">
-    	 <div class="page-header logo">
-  <h1>StttW&#39;s Blog<span class="blink-fast">|</span></h1>
-</div>
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-<div class="row page">
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-	
-	<div class="col-md-9">
-	
+</head>
 
-		<div class="slogan">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-
-		<i class="fa fa-heart blink-slow"></i>
-
-		歪比歪比
-
-</div>    
-
-		<div id="top_search"></div>
-		<div class="mypage">
-		
-		<!-- title and entry -->
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2022/01/26/ConcurrentNotes/" >Concurrent System Study Notes(Continuing...)</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2022-01-26  </div>
-		</div>
-	</div>
-	
-
-
-			<!--
-<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="Signals"><a href="#Signals" class="headerlink" title="Signals"></a>Signals</h1><h2 id="Signal-Lifespan"><a href="#Signal-Lifespan" class="headerlink" title="Signal Lifespan"></a>Signal Lifespan</h2><p>A <strong>signal</strong> is <strong>generated</strong> when a relevant event happens, and is <strong>delivered</strong> when the target process receves it. The lifespan of a signal is from its generation to its delivery.</p>
-	
-
-	</div>
-  <a type="button" href="/2022/01/26/ConcurrentNotes/#more" class="btn btn-default more">Read More</a>
-</div>
-
--->
-<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="Signals"><a href="#Signals" class="headerlink" title="Signals"></a>Signals</h1><h2 id="Signal-Lifespan"><a href="#Signal-Lifespan" class="headerlink" title="Signal Lifespan"></a>Signal Lifespan</h2><p>A <strong>signal</strong> is <strong>generated</strong> when a relevant event happens, and is <strong>delivered</strong> when the target process receves it. The lifespan of a signal is from its generation to its delivery.</p>
-	
-	</div>
-  <a type="button" href="/2022/01/26/ConcurrentNotes/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2022/01/23/Java的多线程/" >Java多线程的学习笔记(Multithreading in Java)(未完)</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2022-01-23  </div>
-		</div>
-	</div>
-	
-
-
-			<!--
-<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="写在前边"><a href="#写在前边" class="headerlink" title="写在前边"></a>写在前边</h1><p>前一阵子想用Java从头开始写一个自己的网站，于是找了一个教程。教程的第一步就是入门servlet<br>，自己了解了一下发现需要熟悉多线程。正好这学期有一门课是以C语言为基础讲并发系统的，干脆自己在研究一下Java多线程。</p>
-	
-
-	</div>
-  <a type="button" href="/2022/01/23/Java的多线程/#more" class="btn btn-default more">Read More</a>
-</div>
-
--->
-<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="写在前边"><a href="#写在前边" class="headerlink" title="写在前边"></a>写在前边</h1><p>前一阵子想用Java从头开始写一个自己的网站，于是找了一个教程。教程的第一步就是入门servlet<br>，自己了解了一下发现需要熟悉多线程。正好这学期有一门课是以C语言为基础讲并发系统的，干脆自己在研究一下Java多线程。</p>
-	
-	</div>
-  <a type="button" href="/2022/01/23/Java的多线程/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2022/01/23/Latex技巧总结/" >Latex技巧总结(更新中)</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2022-01-23  </div>
-		</div>
-	</div>
-	
-
-
-			<!--
-<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这篇文章主要记录一些用LaTeX写作时常用的环境以及数学公式，一来方便自己需要时查阅，二来也给有需要的人提供一点便利。</p>
-<p><strong>注意</strong>，这篇文章假设你了解LaTeX的基本知识，所以没有LaTeX的详细教学。</p>
-	
-
-	</div>
-  <a type="button" href="/2022/01/23/Latex技巧总结/#more" class="btn btn-default more">Read More</a>
-</div>
-
--->
-<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这篇文章主要记录一些用LaTeX写作时常用的环境以及数学公式，一来方便自己需要时查阅，二来也给有需要的人提供一点便利。</p>
-<p><strong>注意</strong>，这篇文章假设你了解LaTeX的基本知识，所以没有LaTeX的详细教学。</p>
-	
-	</div>
-  <a type="button" href="/2022/01/23/Latex技巧总结/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2022/01/23/Pyserial库使用心得/" >Pyserial的使用心得</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2022-01-23  </div>
-		</div>
-	</div>
-	
-
-
-			<!--
-<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="关于Pyserial"><a href="#关于Pyserial" class="headerlink" title="关于Pyserial"></a>关于Pyserial</h1><p>Pyserial库封装了访问串口的方法。它为在Windows，OSX，Linux，BSD和IronPython上运行的Python提供后端。<code>serial</code>对象会自动选择合适的后端。<br>This module encapsulates the access for the serial port. It provides backends for Python running on Windows, OSX, Linux, BSD (possibly any POSIX compliant system) and IronPython. The module named “serial” automatically selects the appropriate backend.</p>
-	
-
-	</div>
-  <a type="button" href="/2022/01/23/Pyserial库使用心得/#more" class="btn btn-default more">Read More</a>
-</div>
-
--->
-<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="关于Pyserial"><a href="#关于Pyserial" class="headerlink" title="关于Pyserial"></a>关于Pyserial</h1><p>Pyserial库封装了访问串口的方法。它为在Windows，OSX，Linux，BSD和IronPython上运行的Python提供后端。<code>serial</code>对象会自动选择合适的后端。<br>This module encapsulates the access for the serial port. It provides backends for Python running on Windows, OSX, Linux, BSD (possibly any POSIX compliant system) and IronPython. The module named “serial” automatically selects the appropriate backend.</p>
-	
-	</div>
-  <a type="button" href="/2022/01/23/Pyserial库使用心得/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2022/01/23/部署Flask项目/" >在CentOS 8上部署基于Flask实现的项目</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2022-01-23  </div>
-		</div>
-	</div>
-	
-
-
-			<!--
-<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>写这篇文章是因为我在自己部署项目的时候，遇到了很多仅靠别人的博客和回答解决不了的问题。于是在自己解决了之后，就希望能够详细的记录下来，既能方便其他可能跟我一样基础比较差的人，也预防将来的自己忘掉了，又得一遍遍的翻枯燥的官方文档。</p>
-	
-
-	</div>
-  <a type="button" href="/2022/01/23/部署Flask项目/#more" class="btn btn-default more">Read More</a>
-</div>
-
--->
-<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>写这篇文章是因为我在自己部署项目的时候，遇到了很多仅靠别人的博客和回答解决不了的问题。于是在自己解决了之后，就希望能够详细的记录下来，既能方便其他可能跟我一样基础比较差的人，也预防将来的自己忘掉了，又得一遍遍的翻枯燥的官方文档。</p>
-	
-	</div>
-  <a type="button" href="/2022/01/23/部署Flask项目/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-
-		</div>
-
-		<!-- pagination -->
-		<div>
-  		<center>
-		<div class="pagination">
-
-   
-</div>
-
-  		</center>
-		</div>
-
-		
-		
-	</div> <!-- col-md-9 -->
-
-	
-		<div class="col-md-3">
-	<div id="sidebar">
-	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 
+  <div class="site-meta">
 
-		
-			
-	<div class="widget">
-		<h4>Categories</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/Dictionaries/">Dictionaries<span>1</span></a></li>
-		
-			<li><a href="/categories/Linux-Shell/">Linux &amp; Shell<span>1</span></a></li>
-		
-			<li><a href="/categories/Pogramming-Algorithms/">Pogramming&amp;Algorithms<span>1</span></a></li>
-		
-			<li><a href="/categories/Programming-Algorithms/">Programming&amp;Algorithms<span>1</span></a></li>
-		
-		</ul>
-	</div>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">StttW's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-		
-			
-	<div class="widget">
-		<h4>Tag Cloud</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/Python/">Python<span>2</span></a></li>
-		
-			<li><a href="/tags/C/">C<span>1</span></a></li>
-		
-			<li><a href="/tags/Linux/">Linux<span>1</span></a></li>
-		
-			<li><a href="/tags/operating-system/">operating system<span>1</span></a></li>
-		
-			<li><a href="/tags/Multithreading/">Multithreading<span>1</span></a></li>
-		
-			<li><a href="/tags/concurrent-system/">concurrent system<span>1</span></a></li>
-		
-			<li><a href="/tags/Java/">Java<span>1</span></a></li>
-		
-			<li><a href="/tags/LaTeX/">LaTeX<span>1</span></a></li>
-		
-		 
-		</ul>
-	</div>
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
 
 
-		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2022/01/26/ConcurrentNotes/" ><i class="fa fa-file-o"></i>Concurrent System Study Not...</a>
-      </li>
-    
-      <li>
-        <a href="/2022/01/23/Java的多线程/" ><i class="fa fa-file-o"></i>Java多线程的学习笔记(Multithreading...</a>
-      </li>
-    
-      <li>
-        <a href="/2022/01/23/Latex技巧总结/" ><i class="fa fa-file-o"></i>Latex技巧总结(更新中)</a>
-      </li>
-    
-      <li>
-        <a href="/2022/01/23/Pyserial库使用心得/" ><i class="fa fa-file-o"></i>Pyserial的使用心得</a>
-      </li>
-    
-      <li>
-        <a href="/2022/01/23/部署Flask项目/" ><i class="fa fa-file-o"></i>在CentOS 8上部署基于Flask实现的项目</a>
-      </li>
-    
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
   </ul>
+</nav>
+
+
+
+
 </div>
+    </header>
 
-		
-			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
-	
-		<li><i class="https://icons-for-free.com/iconfiles/png/512/linkedin+button+linkedin+logo+logo+icon-1320184669365171116.png"></i><a href="https://www.linkedin.com/in/shentong-wang-b9372b1b7/" title="My Linkin account." target="_blank"]);">LinkedIn</a></li>
-	
-		<li><i class="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png"></i><a href="https://github.com/wangltsss" title="My GitHub mainpage." target="_blank"]);">Github</a></li>
-	
-	</ul>
-</div>
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/wangltsss" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
-		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
 
-	
-	
-</div> <!-- row-fluid -->
-	</div>
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/26/ConcurrentNotes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/26/ConcurrentNotes/" class="post-title-link" itemprop="url">Concurrent System Study Notes(Continuing...)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-01-26 21:37:00" itemprop="dateCreated datePublished" datetime="2022-01-26T21:37:00-05:00">2022-01-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-27 11:17:35" itemprop="dateModified" datetime="2022-01-27T11:17:35-05:00">2022-01-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Programming & Algorithms</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2022/01/26/ConcurrentNotes/" class="post-meta-item leancloud_visitors" data-flag-title="Concurrent System Study Notes(Continuing...)" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2022/01/26/ConcurrentNotes/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/01/26/ConcurrentNotes/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Signals"><a href="#Signals" class="headerlink" title="Signals"></a>Signals</h1><h2 id="Signal-Lifespan"><a href="#Signal-Lifespan" class="headerlink" title="Signal Lifespan"></a>Signal Lifespan</h2><p>A <strong>signal</strong> is <strong>generated</strong> when a relevant event happens, and is <strong>delivered</strong> when the target process receves it. The lifespan of a signal is from its generation to its delivery.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/26/ConcurrentNotes/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-title-link" itemprop="url">Java多线程的学习笔记(Multithreading in Java)(未完)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-01-22 21:16:08" itemprop="dateCreated datePublished" datetime="2022-01-22T21:16:08-05:00">2022-01-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-27 11:22:00" itemprop="dateModified" datetime="2022-01-27T11:22:00-05:00">2022-01-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Programming & Algorithms</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-meta-item leancloud_visitors" data-flag-title="Java多线程的学习笔记(Multithreading in Java)(未完)" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="写在前边"><a href="#写在前边" class="headerlink" title="写在前边"></a>写在前边</h1><p>前一阵子想用Java从头开始写一个自己的网站，于是找了一个教程。教程的第一步就是入门servlet<br>，自己了解了一下发现需要熟悉多线程。正好这学期有一门课是以C语言为基础讲并发系统的，干脆自己在研究一下Java多线程。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">Latex技巧总结(更新中)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-01-21 21:15:59" itemprop="dateCreated datePublished" datetime="2022-01-21T21:15:59-05:00">2022-01-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-27 11:21:53" itemprop="dateModified" datetime="2022-01-27T11:21:53-05:00">2022-01-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Dictionaries/" itemprop="url" rel="index"><span itemprop="name">Dictionaries</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" class="post-meta-item leancloud_visitors" data-flag-title="Latex技巧总结(更新中)" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>505</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这篇文章主要记录一些用LaTeX写作时常用的环境以及数学公式，一来方便自己需要时查阅，二来也给有需要的人提供一点便利。</p>
+<p><strong>注意</strong>，这篇文章假设你了解LaTeX的基本知识，所以没有LaTeX的详细教学。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">Pyserial的使用心得</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-08-17 11:55:32" itemprop="dateCreated datePublished" datetime="2021-08-17T11:55:32-04:00">2021-08-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-27 11:22:47" itemprop="dateModified" datetime="2022-01-27T11:22:47-05:00">2022-01-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Programming & Algorithms</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" class="post-meta-item leancloud_visitors" data-flag-title="Pyserial的使用心得" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>4.7k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>4 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="关于Pyserial"><a href="#关于Pyserial" class="headerlink" title="关于Pyserial"></a>关于Pyserial</h1><p>Pyserial库封装了访问串口的方法。它为在Windows，OSX，Linux，BSD和IronPython上运行的Python提供后端。<code>serial</code>对象会自动选择合适的后端。<br>This module encapsulates the access for the serial port. It provides backends for Python running on Windows, OSX, Linux, BSD (possibly any POSIX compliant system) and IronPython. The module named “serial” automatically selects the appropriate backend.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/" class="post-title-link" itemprop="url">在CentOS 8上部署基于Flask实现的项目</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-07-03 12:06:54" itemprop="dateCreated datePublished" datetime="2021-07-03T12:06:54-04:00">2021-07-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-27 11:22:30" itemprop="dateModified" datetime="2022-01-27T11:22:30-05:00">2022-01-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux-Shell/" itemprop="url" rel="index"><span itemprop="name">Linux & Shell</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/" class="post-meta-item leancloud_visitors" data-flag-title="在CentOS 8上部署基于Flask实现的项目" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>5.5k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>5 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>写这篇文章是因为我在自己部署项目的时候，遇到了很多仅靠别人的博客和回答解决不了的问题。于是在自己解决了之后，就希望能够详细的记录下来，既能方便其他可能跟我一样基础比较差的人，也预防将来的自己忘掉了，又得一遍遍的翻枯燥的官方文档。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
-  <div class="container-narrow">
-  <footer> <p>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="st w"
+      src="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+  <p class="site-author-name" itemprop="name">st w</p>
+  <div class="site-description" itemprop="description">Share ideas while learning.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wangltsss" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangltsss" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:me@stttw.com" title="E-Mail → mailto:me@stttw.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
   
-  &copy; 2022 st w's Blog
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">st w</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">14k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">12 mins.</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+    <span class="post-count">| 博客共14k字</span>
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61f2cf5b2a5d7e12" async="async"></script>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
   
-      powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.Theme <a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" target="_blank">freemind.bithack</a>  
-</p>
- </footer>
-</div> <!-- container-narrow -->
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
   
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-<a id="gotop" href="#">   
-  <span>⬆︎TOP</span>
-</a>
 
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/search.js"></script> 
+  
 
 
-
-
-   <script type="text/javascript">      
-     var search_path = "search.xml";
-	 if (search_path.length == 0) {
-	 	search_path = "search.xml";
-	 }
-	 var path = "/" + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-   </script>
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'nflbOJbX4Hdx110wPTbCcYQJ-gzGzoHsz',
+      appKey     : '3M98T2DabXtKJpFe7vbhcVyD',
+      placeholder: "提交评论时留下邮箱收到回复后将自动通知",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'en' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
-   </html>
+</html>
