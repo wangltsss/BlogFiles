@@ -277,7 +277,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
-    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/22/MultithreadingInJava/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
@@ -291,7 +291,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-title-link" itemprop="url">Java多线程的学习笔记(Multithreading in Java)(未完)</a>
+            <a href="/2022/01/22/MultithreadingInJava/" class="post-title-link" itemprop="url">Multithreading in Java</a>
         </h2>
 
         <div class="post-meta">
@@ -308,7 +308,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-01-27 11:22:00" itemprop="dateModified" datetime="2022-01-27T11:22:00-05:00">2022-01-27</time>
+                <time title="Modified: 2022-09-18 15:10:13" itemprop="dateModified" datetime="2022-09-18T15:10:13-04:00">2022-09-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -321,7 +321,7 @@
             </span>
 
           
-            <span id="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-meta-item leancloud_visitors" data-flag-title="Java多线程的学习笔记(Multithreading in Java)(未完)" title="Views">
+            <span id="/2022/01/22/MultithreadingInJava/" class="post-meta-item leancloud_visitors" data-flag-title="Multithreading in Java" title="Views">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -336,8 +336,8 @@
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/01/22/MultithreadingInJava/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/01/22/MultithreadingInJava/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -347,14 +347,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>1.4k</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
 
         </div>
@@ -366,11 +366,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="写在前边">写在前边</h1>
-<p>前一阵子想用Java从头开始写一个自己的网站，于是找了一个教程。教程的第一步就是入门servlet ，自己了解了一下发现需要熟悉多线程。正好这学期有一门课是以C语言为基础讲并发系统的，干脆自己在研究一下Java多线程。</p>
+          <h1 id="preface">Preface</h1>
+<p>I wanted to build a website of my own from scratch using Java recently, and so I found myself a hands-on tutorial. The very first step was to write small components called <code>servlet</code>, which required multi-threading.
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/01/22/Java%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B/#more" rel="contents">
+              <a class="btn" href="/2022/01/22/MultithreadingInJava/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -394,7 +394,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
-    <link itemprop="mainEntityOfPage" href="http://stttw.com/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2021/08/17/NoteAboutPyserial/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
@@ -408,125 +408,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">Latex技巧总结(更新中)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-01-21 21:15:59" itemprop="dateCreated datePublished" datetime="2022-01-21T21:15:59-05:00">2022-01-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-01-29 13:25:04" itemprop="dateModified" datetime="2022-01-29T13:25:04-05:00">2022-01-29</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Dictionaries/" itemprop="url" rel="index"><span itemprop="name">Dictionaries</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" class="post-meta-item leancloud_visitors" data-flag-title="Latex技巧总结(更新中)" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="前言">前言</h1>
-<p>这篇文章主要记录一些用LaTeX写作时常用的环境以及数学公式，一来方便自己需要时查阅，二来也给有需要的人提供一点便利。</p>
-<p><strong>注意</strong>，这篇文章假设你了解LaTeX的基本知识，所以没有LaTeX的详细教学。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/21/Latex%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
-    <link itemprop="mainEntityOfPage" href="http://stttw.com/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
-      <meta itemprop="name" content="st w">
-      <meta itemprop="description" content="Share ideas while learning.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="StttW's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">Pyserial的使用心得</a>
+            <a href="/2021/08/17/NoteAboutPyserial/" class="post-title-link" itemprop="url">Notes on using Pyserial</a>
         </h2>
 
         <div class="post-meta">
@@ -543,7 +425,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-01-27 11:22:47" itemprop="dateModified" datetime="2022-01-27T11:22:47-05:00">2022-01-27</time>
+                <time title="Modified: 2022-09-18 17:19:03" itemprop="dateModified" datetime="2022-09-18T17:19:03-04:00">2022-09-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -556,7 +438,7 @@
             </span>
 
           
-            <span id="/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" class="post-meta-item leancloud_visitors" data-flag-title="Pyserial的使用心得" title="Views">
+            <span id="/2021/08/17/NoteAboutPyserial/" class="post-meta-item leancloud_visitors" data-flag-title="Notes on using Pyserial" title="Views">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -571,125 +453,8 @@
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>4.7k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>4 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="关于pyserial">关于Pyserial</h1>
-<p>Pyserial库封装了访问串口的方法。它为在Windows，OSX，Linux，BSD和IronPython上运行的Python提供后端。<code>serial</code>对象会自动选择合适的后端。 This module encapsulates the access for the serial port. It provides backends for Python running on Windows, OSX, Linux, BSD (possibly any POSIX compliant system) and IronPython. The module named “serial” automatically selects the appropriate backend.
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/08/17/Pyserial%E5%BA%93%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
-    <link itemprop="mainEntityOfPage" href="http://stttw.com/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
-      <meta itemprop="name" content="st w">
-      <meta itemprop="description" content="Share ideas while learning.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="StttW's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/" class="post-title-link" itemprop="url">在CentOS 8上部署基于Flask实现的项目</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-07-03 12:06:54" itemprop="dateCreated datePublished" datetime="2021-07-03T12:06:54-04:00">2021-07-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-01-27 11:22:30" itemprop="dateModified" datetime="2022-01-27T11:22:30-05:00">2022-01-27</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux-Shell/" itemprop="url" rel="index"><span itemprop="name">Linux & Shell</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/" class="post-meta-item leancloud_visitors" data-flag-title="在CentOS 8上部署基于Flask实现的项目" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/08/17/NoteAboutPyserial/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/17/NoteAboutPyserial/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -718,11 +483,128 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="写在前面">写在前面</h1>
-<p>写这篇文章是因为我在自己部署项目的时候，遇到了很多仅靠别人的博客和回答解决不了的问题。于是在自己解决了之后，就希望能够详细的记录下来，既能方便其他可能跟我一样基础比较差的人，也预防将来的自己忘掉了，又得一遍遍的翻枯燥的官方文档。
+          <h1 id="about-pyserial">About Pyserial</h1>
+<p>This module encapsulates the access methods for serial ports. It provides backends for Python running on Windows, OSX, Linux, BSD (possibly any POSIX compliant system) and IronPython. The module named “serial” automatically selects the appropriate backend.
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/07/03/%E9%83%A8%E7%BD%B2Flask%E9%A1%B9%E7%9B%AE/#more" rel="contents">
+              <a class="btn" href="/2021/08/17/NoteAboutPyserial/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en, zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://stttw.com/2021/07/03/DeployAFlaskProj/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://img.xiaokeai.com/uploadfile/2020/0527/20200527030254779.jpg">
+      <meta itemprop="name" content="st w">
+      <meta itemprop="description" content="Share ideas while learning.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StttW's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/03/DeployAFlaskProj/" class="post-title-link" itemprop="url">Deploying Flask project on CentOS 8</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-07-03 12:06:54" itemprop="dateCreated datePublished" datetime="2021-07-03T12:06:54-04:00">2021-07-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-09-18 15:13:36" itemprop="dateModified" datetime="2022-09-18T15:13:36-04:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux-Shell/" itemprop="url" rel="index"><span itemprop="name">Linux & Shell</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/07/03/DeployAFlaskProj/" class="post-meta-item leancloud_visitors" data-flag-title="Deploying Flask project on CentOS 8" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/07/03/DeployAFlaskProj/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/07/03/DeployAFlaskProj/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>6.1k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>6 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="preface">Preface</h1>
+<p>The reason for writing this note is I met a lot of problems that do not have direct solutions that can be found online. I thought writing it down could help a lot as I may still face similar issues in the future.
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/07/03/DeployAFlaskProj/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -810,20 +692,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -871,15 +753,15 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">15k</span>
+    <span title="Symbols count total">16k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">14 mins.</span>
+    <span title="Reading time total">15 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-    <span class="post-count">| 博客共15k字</span>
+    <span class="post-count">| 博客共16k字</span>
   </div>
   <div class="addthis_inline_share_toolbox">
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61f2cf5b2a5d7e12" async="async"></script>
@@ -935,59 +817,6 @@
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
