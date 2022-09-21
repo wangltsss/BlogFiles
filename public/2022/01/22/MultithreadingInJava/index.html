@@ -30,7 +30,7 @@
 <meta property="og:description" content="Preface I wanted to build a website of my own from scratch using Java recently, and so I found myself a hands-on tutorial. The very first step was to write small components called servlet, which requi">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-01-23T02:16:08.000Z">
-<meta property="article:modified_time" content="2022-09-18T19:10:13.638Z">
+<meta property="article:modified_time" content="2022-09-18T21:34:36.578Z">
 <meta property="article:author" content="st w">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Multithreading">
@@ -193,7 +193,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-18 15:10:13" itemprop="dateModified" datetime="2022-09-18T15:10:13-04:00">2022-09-18</time>
+                <time title="Modified: 2022-09-18 17:34:36" itemprop="dateModified" datetime="2022-09-18T17:34:36-04:00">2022-09-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,20 +252,19 @@
 
       
         <h1 id="preface">Preface</h1>
-<p>I wanted to build a website of my own from scratch using Java recently, and so I found myself a hands-on tutorial. The very first step was to write small components called <code>servlet</code>, which required multi-threading. <span id="more"></span></p>
+<p>I wanted to build a website of my own from scratch using Java recently, and so I found myself a hands-on tutorial. The very first step was to write small components called <strong><em>servlet</em></strong>, which required multithreading. <span id="more"></span></p>
 <h1 id="multithreading-basics">Multithreading Basics</h1>
-<p>In an OS, every application executing is usually called a <code>process</code>, while each <code>process</code> can contain multiple <code>threds</code>. Take a typical music player as an example: a music player usually is capable of playing the music while showing the lyrics, and maybe show the album cover as well. Here, one thread will take care of playing the music, while another will take care of synchronizing the lyrics. One process contains at least one thread, but it can contain multiple threads.</p>
+<p>In an OS, every application executing is usually called a <strong><em>process</em></strong>, while each <strong><em>process</em></strong> can contain multiple <strong><em>threads</em></strong>. Take a typical music player as an example: a music player usually is capable of playing the music while showing the lyrics, and maybe show the album cover as well. Here, one thread will take care of playing the music, while another will take care of synchronizing the lyrics. One process contains at least one thread, but it can contain multiple threads.</p>
 <h1 id="multithreding-in-java">Multithreding in Java</h1>
 <h2 id="multithreading-procedure">Multithreading procedure</h2>
-<p>After creating a <code>Thread</code> instance, a new thread will wait for the<code>start()</code> method to be called so that it will enter Ready state.</br> While being in Ready state, a thread will stay in the ready queue, waiting to be called. </br> When a thread in Ready state acquire CPU resources, it can be put to use by calling the <code>run()</code> method. In this procedure, the thread is in Running state.</br> When a thread runs out of CPU time, or the <code>wait()</code> method is called, the thread will enter Blocked state. While in Blocked state, the thread will remain in this state unless it regains CPU resources.</p>
-<h2 id="creating-a-new-thread-instance">Creating a new <code>Thread</code> Instance</h2>
+<p>After creating a <strong><em>Thread</em></strong> instance, a new thread will wait for the<code>start()</code> method to be called so that it will enter <strong><em>Ready</em></strong> state.</br> While being in <strong><em>Ready</em></strong> state, a thread will stay in the ready queue, waiting to be called. </br> When a thread in <strong><em>Ready</em></strong> state acquire CPU resources, it can be put to use by calling the <code>run()</code> method. In this procedure, the thread is in <strong><em>Running</em></strong> state.</br> When a thread runs out of CPU time, or the <code>wait()</code> method is called, the thread will enter <strong><em>Blocked</em></strong> state. While in <strong><em>Blocked</em></strong> state, the thread will remain in this state unless it regains CPU resources.</p>
+<h2 id="creating-a-new-thread-instance">Creating a new <strong><em>Thread</em></strong> Instance</h2>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadRunnable</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">	<span class="comment">/* override run() method */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="comment">/* */</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>or</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">	<span class="comment">/* override run() method */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="comment">/* */</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="synchronization-between-threads">Synchronization between threads</h2>
 <h3 id="atomic-operation">Atomic operation</h3>
-<p>Assignment like</br></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n = n + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>Assignment like</br> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n = n + <span class="number">1</span>;</span><br></pre></td></tr></table></figure></p>
 <p>seems to look like a single instrution, however, it consists of at least three instructions.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// erroneous Assembly.</span><br><span class="line">ld sp(0), x5		// suppose stack pointer is pointing to n and load it into x5.</span><br><span class="line">addi x5, x5, 1		// n = n + 1.</span><br><span class="line">sd x5, sp(0)		// save n = n + 1 back.</span><br></pre></td></tr></table></figure>
 <p>Atomic operations are indivisible:</p>
@@ -376,7 +375,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -389,7 +388,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -437,15 +436,15 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">16k</span>
+    <span title="Symbols count total">18k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">15 mins.</span>
+    <span title="Reading time total">16 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-    <span class="post-count">| 博客共16k字</span>
+    <span class="post-count">| 博客共18k字</span>
   </div>
   <div class="addthis_inline_share_toolbox">
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61f2cf5b2a5d7e12" async="async"></script>
