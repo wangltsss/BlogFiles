@@ -1,9 +1,9 @@
 ---
 title: Concurrent System Study Notes(Continuing...)
 tags:
-  - concurrent system
+  - Concurrent System
   - C
-  - operating system
+  - Operating System
 categories: Programming & Algorithms
 date: 2022-01-26 21:37:00
 ---
